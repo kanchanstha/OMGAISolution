@@ -1,4 +1,318 @@
-html {
-  height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.sign-in-btn {
+  background: #FF5733;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero {
+  padding: 50px 0;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.primary-btn {
+  background: #FF5733;
+  color: #FFFFFF;
+}
+
+.secondary-btn {
+  background: #FFFFFF;
+  color: #FF5733;
+  border: 1px solid #FF5733;
+}
+
+/* Sign-In Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.forgot-password {
+  display: block;
+  margin-bottom: 10px;
+  color: #FF5733;
+}
+
+/* Services Section */
+.services {
+  background: #F5F5F5;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.card {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  margin-bottom: 10px;
+}
+
+/* Blog Section */
+.blog {
+  padding: 50px 0;
+  text-align: center;
+  background: linear-gradient(to bottom, #FFFFFF, #F5F5F5);
+}
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.blog-cards .card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.read-more {
+  color: #FF5733;
+  text-decoration: none;
+}
+
+/* Connect Section */
+.connect {
+  background: #E6F0FA;
+  padding: 50px 0;
+}
+
+.connect-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.connect-content .text {
+  flex: 1;
+}
+
+.connect-content .image {
+  flex: 1;
+}
+
+.connect-content ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.connect-content ul li {
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-content form,
+.contact-info {
+  flex: 1;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+/* Footer */
+footer {
+  background: #333333;
+  color: #FFFFFF;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.social-media {
+  margin: 20px 0;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+
+  header .container,
+  .connect-content,
+  .contact-content {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
 }
