@@ -38,10 +38,11 @@ p {
 
 /* Header */
 header {
-  background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('header.jpg') no-repeat center center/cover;
   color: #FFFFFF;
   text-align: center;
-  padding: 20px 0;
+  padding: 60px 0;
+  position: relative;
 }
 
 header .container {
@@ -161,9 +162,28 @@ form textarea {
 
 /* Services Section */
 .services {
-  background: #F5F5F5;
-  padding: 50px 0;
+  background: #f8f9fa;
+  padding: 80px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+.services .container {
+  position: relative;
+  z-index: 1;
 }
 
 .service-cards {
@@ -175,10 +195,16 @@ form textarea {
 
 .card {
   background: #FFFFFF;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .card:hover {
@@ -215,8 +241,24 @@ form textarea {
 
 /* Connect Section */
 .connect {
-  background: #E6F0FA;
-  padding: 50px 0;
+  background: url('Enhance customer support and engagement.jpg') no-repeat center center/cover;
+  padding: 80px 0;
+  position: relative;
+}
+
+.connect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.connect .container {
+  position: relative;
+  z-index: 1;
 }
 
 .connect-content {
