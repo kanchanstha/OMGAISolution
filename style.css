@@ -7,6 +7,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   color: #333333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
 }
 
 h1,
@@ -38,12 +39,12 @@ p {
 
 /* Header with Banner Image */
 header {
-  /* Replace the placeholder with the path to your uploaded image in Replit */
-  background: url('images/banner.jpg') no-repeat center center/cover;
+  background: url('header.jpg') no-repeat center center/cover;
   color: #FFFFFF;
   text-align: center;
-  padding: 20px 0;
+  padding: 60px 0;
   position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Optional: Add an overlay to improve text readability on the banner */
@@ -179,9 +180,11 @@ form textarea {
 
 /* Services Section */
 .services {
-  background: #F5F5F5;
-  padding: 50px 0;
+  background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+  padding: 80px 0;
   text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .service-cards {
@@ -193,10 +196,11 @@ form textarea {
 
 .card {
   background: #FFFFFF;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.03);
 }
 
 .card:hover {
