@@ -269,3 +269,29 @@ footer {
     padding: 40px 0;
   }
 }
+
+.what-we-believe {
+  padding: 60px 0;
+  background: #F5F5F5;
+  text-align: center;
+}
+
+.beliefs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.belief {
+  padding: 20px;
+}
+
+.belief h3 {
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.belief p {
+  color: #666666;
+}
