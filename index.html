@@ -320,6 +320,14 @@
   <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-ap1.hs-scripts.com/441793553.js"></script>
   <!-- End of HubSpot Embed Code -->
+  <script>
+    // Initialize HubSpot chat widget when the page loads
+    window.addEventListener('load', function() {
+      if (window.HubSpotConversations) {
+        window.HubSpotConversations.widget.load();
+      }
+    });
+  </script>
 </body>
 
 </html>
